@@ -25,9 +25,10 @@ export const reset = css`
     margin: 0;
   }
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-  ul[role='list'],
-  ol[role='list'] {
+  ul,
+  ol {
     list-style: none;
+    margin: 0;
   }
   /* Set core root defaults */
   html:focus-within {
@@ -76,7 +77,7 @@ export const global = css`
     font-size: 1rem;
     line-height: 1.5rem;
     font-family: ${fonts.primary};
-    color: ${colors.black};
+    color: ${colors.white};
     background-color: ${colors.gray.light};
   }
 `;
