@@ -78,6 +78,6 @@ export const global = css`
     line-height: 1.5rem;
     font-family: ${fonts.primary};
     color: ${colors.white};
-    background-color: ${colors.gray.light};
+    background-color: ${colors.gray.dark};
   }
 `;
