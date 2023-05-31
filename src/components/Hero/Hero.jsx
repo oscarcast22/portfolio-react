@@ -4,7 +4,7 @@ import TextSpan from './TextSpan';
 import Reveal from '../Animations/Reveal';
 
 const Container = styled.div`
-  height: 360px;
+  min-height: 360px;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -27,6 +27,13 @@ const Container = styled.div`
     line-height: 2rem;
     font-weight: 400;
     flex-direction: row;
+  }
+
+  p:hover {
+    color: ${colors.gray.medium};
+
+    transition: color 0.2s ease-in-out;
+    cursor: default;
   }
 
   span {
@@ -55,7 +62,6 @@ const WordBold = styled.div`
     cursor: default;
   }
 `
-
 
 function Hero() {
   const title1 = `Hey, `.split('');
@@ -136,9 +142,9 @@ function Hero() {
         </Reveal>
       </h2>
       <Reveal>
-      <p>
-        {`I have a passion for web development and love to create for web and mobile devices.`}
-      </p>
+        <p>
+          {`I have a passion for web development and love to create for web and mobile devices.`}
+        </p>
       </Reveal>
     </Container>
   )
