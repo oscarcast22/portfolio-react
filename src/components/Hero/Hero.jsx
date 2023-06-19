@@ -1,38 +1,41 @@
 import styled from '@emotion/styled'
 import { colors } from '../../styles/colors'
-import TextSpan from './TextSpan';
-import Reveal from '../Animations/Reveal';
+import Presentation from './TextPresentation'
+
 
 const Container = styled.div`
   min-height: 360px;
-  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
-  gap: .7rem;
+  padding: 20px 30px;
+  gap: .5rem;
+
 
   h1 {
     color: ${colors.white};
     align-self: flex-start;
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 4rem;
+    line-height: 4.7rem;
     font-weight: 600;
   }
 
   h2 {
     color: ${colors.white};
     align-self: flex-start;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 2.7rem;
     font-weight: 400;
     flex-direction: row;
   }
+  
+  p {
+    font-size: 1.2rem;
+  }
 
   p:hover {
-    color: ${colors.gray.medium};
-
-    transition: color 0.2s ease-in-out;
+    text-shadow: 0 0 20px ${colors.aqua};
+    transition: text-shadow 0.2s ease-in;
     cursor: default;
   }
 
@@ -47,105 +50,23 @@ const Container = styled.div`
   }
 `
 
-const Word = styled.div`
-  display: inline-block;
-`
-
-const WordBold = styled.div`
-  display: inline-block;
-  font-weight: 600;
-  color: ${colors.aqua};
-
-  span:hover {
-    color: ${colors.white};
-    transition: color 0.2s ease-in;
-    cursor: default;
-  }
+const Dotgrid = styled.div`
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, #050505 10%, transparent 11%);
+  background-size: 2em 2em;
+  opacity: 0.95;
 `
 
 function Hero() {
-  const title1 = `Hey, `.split('');
-  const title2 = `i'm `.split('');
-  const title3 = `Oscar.`.split('');
-  const subtitle1 = `I'm `.split('');
-  const subtitle2 = `a `.split('');
-  const subtitle3 = `Full `.split('');
-  const subtitle4 = `Stack `.split('');
-  const subtitle5 = `Developer.`.split('');
 
   return (
     <Container>
-      <Reveal>
-      <h1>
-        <Word>
-          {title1.map((letter, index) => (
-            <TextSpan key={index}>
-              {letter === " " ? "\u00A0" : letter }
-            </TextSpan>
-          ))}
-        </Word>
-        <Word>
-          {title2.map((letter, index) => (
-            <TextSpan key={index}>
-              {letter === " " ? "\u00A0" : letter }
-            </TextSpan>
-          ))}
-        </Word>
-        <Word>
-          {title3.map((letter, index) => (
-            <TextSpan key={index}>
-              {letter === " " ? "\u00A0" : letter }
-            </TextSpan>
-          ))}
-        </Word>
-      </h1>
-      </Reveal>
-      <h2>
-        <Reveal>
-        <Word>
-          {subtitle1.map((letter, index) => (
-            <TextSpan key={index}>
-              {letter === " " ? "\u00A0" : letter }
-            </TextSpan>
-          ))}
-        </Word>
-        <Word>
-          {subtitle2.map((letter, index) => (
-            <TextSpan key={index}>
-              {letter === " " ? "\u00A0" : letter }
-            </TextSpan>
-          ))}
-        </Word>
-        <WordBold>
-        <Word>
-          {subtitle3.map((letter, index) => (
-            <TextSpan key={index}>
-              {letter === " " ? "\u00A0" : letter }
-            </TextSpan>
-          ))}
-        </Word>
-        <Word>
-          {subtitle4.map((letter, index) => (
-            <TextSpan key={index}>
-              {letter === " " ? "\u00A0" : letter }
-            </TextSpan>
-          ))}
-        </Word>
-        <Word>
-          {subtitle5.map((letter, index) => (
-            <TextSpan key={index}>
-              {letter === " " ? "\u00A0" : letter }
-            </TextSpan>
-          ))}
-        </Word>
-        </WordBold>
-        </Reveal>
-      </h2>
-      <Reveal>
-        <p>
-          {`I have a passion for web development and love to create for web and mobile devices.`}
-        </p>
-      </Reveal>
+      <Dotgrid></Dotgrid>
+      <Presentation/>
     </Container>
   )
 }

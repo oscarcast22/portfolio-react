@@ -2,7 +2,8 @@ import styled from '@emotion/styled'
 import { colors } from '../../styles/colors'
 
 const Header = styled.header`
-  background-color: ${colors.gray.dark};
+  background-color: #0000002e;
+  backdrop-filter: blur(50px);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
