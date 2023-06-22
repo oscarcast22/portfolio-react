@@ -1,12 +1,16 @@
 import styled from '@emotion/styled'
-import { colors } from '../../styles/colors'
 
-const Header = styled.header`
-  background-color: #0000002e;
-  backdrop-filter: blur(50px);
+const Header = styled.nav`
+  backdrop-filter: blur(40px);
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+  z-index: 99;
+  width: 100vw;
+  height: 60px;
 `
 
 const Menu = styled.ul`

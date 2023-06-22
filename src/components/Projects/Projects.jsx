@@ -13,14 +13,11 @@ function Projects() {
       <ProjectsGrid>
         <Project>
           <Card>
-            <Screen src={twetablescreen} alt="" />
+            <ProjectImage src={twetablescreen} alt="Twetable" />
             <h2>Twetable</h2>
-            <p>
-              A full stack web aplication made with Rails techonology {'(click image to see more)'}
-            </p>
             <Tech>
               <img src={rubyLogo} alt="" />
-              <img src={rubyonrailsLogo} alt="ruby on rails" style={{ padding: '1%', backgroundColor: '#CC0000'}} />
+              <img src={rubyonrailsLogo} alt="ruby on rails" style={{ padding: '1%', fill: "red"}} />
               <img src={postgresqlLogo} alt="" />
               <img src={htmlLogo} alt="" />
               <img src={cssLogo} alt="" />
@@ -36,37 +33,43 @@ function Projects() {
 export default Projects
 
 const ProjectsContainer = styled.section`
+  position: relative;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  background-color: blueviolet;
+  background-color: #5f5f5f;
+  z-index: -1;
+
+  h1 {
+    z-index: 2;
+  }
 `
 
 const ProjectsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   align-items: center;
   grid-gap: 30px;
   width: -moz-available;          
   width: -webkit-fill-available; 
+  z-index: 1;
 `
 
 const Project = styled.div`
 `
 
 const Card = styled.div`
-  border: 1px solid #009a8f;
-  background-color: #010046;
+  background-color: #242424;
   border-radius: 4%;
   max-width: 280px;
   margin: auto;
-  padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  align-items: center;
 
   h2 {
     text-align: center;
@@ -82,21 +85,20 @@ const Tech = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-bottom: .25rem;
+  margin-bottom: .7rem;
+  gap: .6rem;
 
   img {
-    height: 38px;
-    width: 38px;
-    background-color: #f6f6f6;
-    border-radius: 50%;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    height: 2rem;
+    width: 2rem;
   }
 `
 
-const Screen = styled.img`
+const ProjectImage = styled.img`
   width: 100%;
-  max-height: 240px;
+  max-height: 200px;
   object-fit: cover;
   border-radius: 5%;
 
 `
+
