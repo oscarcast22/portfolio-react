@@ -10,6 +10,7 @@ import cssLogo from '../assets/CSS_logo.png';
 import photoshopLogo from '../assets/photoshoplogo.png';
 import illustratorLogo from '../assets/illustrator.png';
 import Reveal from "./Animations/Reveal";
+import rickandmorty from '../assets/rick-and-morty.gif';
 
 const SkillsSection = styled.section`
   padding: 5%;
@@ -77,7 +78,56 @@ const Presentation = styled.div`
 `
 
 const Info = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2rem;
+  align-items: center;
+  margin-top: .3rem;
+  @media (max-width: 700px) {
+    flex-direction: column;
 
+  }
+  
+  img {
+    width: 350px;
+    height: 280px;
+    object-fit: cover;
+    object-position: 100%;
+    border-radius: 5%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 700px) {
+      width: 290px;
+      height: 300px;
+      
+    }
+
+  }
+
+  p {
+    background-image: linear-gradient(
+      90deg, rgba(255,255,255,1) 0%,
+      #c2fff6 50%, rgba(255,255,255,1) 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 4s linear infinite;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 `
 
 const TextAnimation = styled.div`
@@ -87,15 +137,24 @@ export default function Skills () {
   return (
     <>
       <SkillsSection>
+        <Reveal ><h1>About me</h1></Reveal>
         <Presentation>
           <Info>
-            <img src="" alt="" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis dignissimos in, cumque alias illo ad</p>
-            
+            <Reveal>
+              <img src={rickandmorty} alt="" />
+            </Reveal>
+            <Reveal>
+              <div >
+                <p>
+                  Full-Stack Web Developer passionate about technology.
+                  Collaborative, interested to work alongside a dynamic team, curious, innovative and eager to learn new technologies. Currently
+                  looking for new professional challenges in backend development projects with big impact in human life.
+                </p>
+              </div>
+            </Reveal>
           </Info>
-          <TextAnimation><p>i Love to code</p></TextAnimation>
         </Presentation>
-        <Reveal ><h1>About me</h1></Reveal>
+        <TextAnimation><p>some of my skills</p></TextAnimation>
         <SkillsGrid>
           <Reveal  slideAnimation = {false} >
             <Skill>

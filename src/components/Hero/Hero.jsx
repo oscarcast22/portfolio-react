@@ -20,7 +20,7 @@ const Container = styled.section`
     color: ${colors.white};
     align-self: flex-start;
     font-size: 4em;
-    line-height: 1em;
+    line-height: 1.5em;
     font-weight: 600;
   }
 
