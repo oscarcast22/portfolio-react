@@ -24,6 +24,14 @@ const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: .5rem;
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
 `
 
 
@@ -106,11 +114,6 @@ function Presentation() {
       </WordBold>
       </Reveal>
     </h2>
-    <Reveal>
-      <p>
-        {`I have a passion for web development and love to create for web and mobile devices.`}
-      </p>
-    </Reveal>
     </TextBox>
     </>
   );

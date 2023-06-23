@@ -1,10 +1,14 @@
 import styled from "@emotion/styled"
-import postgresqlLogo from '../../assets/Postgresql.png';
-import rubyLogo from '../../assets/Ruby_logo.png';
+import postgresqlLogo from '../../assets/Postgresql-icon.svg';
+import rubyLogo from '../../assets/ruby_logo.svg';
 import rubyonrailsLogo from '../../assets/Ruby_On_Rails_Logo.svg';
-import htmlLogo from '../../assets/HTML_logo.png';
-import cssLogo from '../../assets/CSS_logo.png';
-import twetablescreen from '../../assets/twetable.png'
+import htmlLogo from '../../assets/HTML5.svg';
+import cssLogo from '../../assets/CSS3_logo.svg';
+import twetablescreen from '../../assets/Projects/twetable.png'
+import eatablescreen from '../../assets/Projects/Eatable.png'
+import reactLogo from '../../assets/react.svg';
+import javascriptLogo from '../../assets/JavaScript_logo.svg';
+import { motion } from "framer-motion";
 
 function Projects() {
   return(
@@ -16,11 +20,23 @@ function Projects() {
             <ProjectImage src={twetablescreen} alt="Twetable" />
             <h2>Twetable</h2>
             <Tech>
-              <img src={rubyLogo} alt="" />
-              <img src={rubyonrailsLogo} alt="ruby on rails" style={{ padding: '1%', fill: "red"}} />
-              <img src={postgresqlLogo} alt="" />
-              <img src={htmlLogo} alt="" />
-              <img src={cssLogo} alt="" />
+              <motion.img src={rubyLogo} style={{scale: .8}} alt="" />
+              <motion.img src={rubyonrailsLogo} alt="ruby on rails" style={{ backgroundColor: '#CC0000' }} />
+              <motion.img src={postgresqlLogo} alt="" />
+              <motion.img src={htmlLogo} alt="" />
+              <motion.img src={cssLogo} alt="" />
+            </Tech>
+          </Card>
+        </Project>
+        <Project>
+          <Card>
+            <ProjectImage src={eatablescreen} alt="Twetable" />
+            <h2>Eatable</h2>
+            <Tech>
+              <motion.img src={reactLogo} alt="" />
+              <motion.img src={javascriptLogo} alt="ruby on rails" style={{ padding: '1%', fill: "red"}} />
+              <motion.img src={htmlLogo} alt="" />
+              <motion.img src={cssLogo} alt="" />
             </Tech>
           </Card>
         </Project>
@@ -34,7 +50,9 @@ export default Projects
 
 const ProjectsContainer = styled.section`
   position: relative;
-  padding: 2rem;
+  padding: 5%;
+  padding-bottom: 5rem;
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,16 +1,17 @@
 import styled from '@emotion/styled'
 
-const Header = styled.nav`
+const Nav = styled.section`
   backdrop-filter: blur(40px);
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
   z-index: 99;
   width: 100vw;
-  height: 60px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5%;
 `
 
 const Menu = styled.ul`
@@ -22,14 +23,14 @@ const Menu = styled.ul`
 
 function Navbar() {
     return (
-      <Header>
+      <Nav>
         <Menu>
           <li>Home</li>
           <li>About</li>
           <li>Contact</li>
         </Menu>
         <p>Oscar</p>
-      </Header>
+      </Nav>
     );
   }
   

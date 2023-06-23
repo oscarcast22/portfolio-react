@@ -12,9 +12,9 @@ import illustratorLogo from '../assets/illustrator.png';
 import Reveal from "./Animations/Reveal";
 
 const SkillsSection = styled.section`
-  padding: 2rem;
-  padding-bottom: 5.5rem;
-  padding-top: 1rem;
+  padding: 5%;
+  padding-bottom: 5rem;
+  padding-top: 1.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -62,6 +62,7 @@ const Curve = styled.div`
   line-height: 0;
   transform: rotate(180deg);
   z-index: 1;
+  bottom: -1px;
 
   svg {
     position: relative;
@@ -71,11 +72,30 @@ const Curve = styled.div`
   }
 `
 
+const Presentation = styled.div`
+  
+`
+
+const Info = styled.div`
+
+`
+
+const TextAnimation = styled.div`
+  
+`
 export default function Skills () {
   return (
     <>
       <SkillsSection>
-      <Reveal ><h1>My skills</h1></Reveal>
+        <Presentation>
+          <Info>
+            <img src="" alt="" />
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis dignissimos in, cumque alias illo ad</p>
+            
+          </Info>
+          <TextAnimation><p>i Love to code</p></TextAnimation>
+        </Presentation>
+        <Reveal ><h1>About me</h1></Reveal>
         <SkillsGrid>
           <Reveal  slideAnimation = {false} >
             <Skill>

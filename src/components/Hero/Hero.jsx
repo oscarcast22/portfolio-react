@@ -4,31 +4,31 @@ import Presentation from './TextPresentation'
 
 
 const Container = styled.section`
-  min-height: 420px;
+  min-height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: .5rem;
   margin: auto;
   position: relative;
-  padding: 4%;
-  padding-top: 5%;
+  padding: 5%;
+  padding-top: 60px;
   background-color: #1d1d1df2;
 
 
   h1 {
     color: ${colors.white};
     align-self: flex-start;
-    font-size: 4rem;
-    line-height: 4.7rem;
+    font-size: 4em;
+    line-height: 1em;
     font-weight: 600;
   }
 
   h2 {
     color: ${colors.white};
     align-self: flex-start;
-    font-size: 2rem;
-    line-height: 2.7rem;
+    font-size: 2em;
+    line-height: 1em;
     font-weight: 400;
     flex-direction: row;
   }
@@ -56,7 +56,7 @@ const Container = styled.section`
 
 const Dotgrid = styled.div`
   position: absolute;
-  top: 12%;
+  top: 15%;
   left: 50%;
   width: 40%;
   height: 40%;
@@ -67,7 +67,7 @@ const Dotgrid = styled.div`
 
 const Curve = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
