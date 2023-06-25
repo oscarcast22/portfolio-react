@@ -20,10 +20,10 @@ const WordBold = styled.div`
 `
 
 const TextBox = styled.div`
-  min-width: 100%;
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  max-width: 1200px;
 
   h1 {
     font-size: 4.5rem;
