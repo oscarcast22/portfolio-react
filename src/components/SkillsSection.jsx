@@ -11,6 +11,7 @@ import photoshopLogo from '../assets/Photoshop_logo.svg';
 import illustratorLogo from '../assets/Illustrator_icon.svg';
 import Reveal from "./Animations/Reveal";
 import rickandmorty from '../assets/rick-and-morty.gif';
+import { motion } from 'framer-motion';
 
 const SkillsSection = styled.section`
   padding: 5%;
@@ -27,39 +28,25 @@ const SkillsSection = styled.section`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
   padding: .5rem;
   gap: 1rem;
-  align-items: center;
   width: 100%;  
   width: -webkit-fill-available; 
   z-index: 99;
   position: relative;
 
-  @media (min-width: 1150px) {
-    grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
-  };
 `
 
-const Skill = styled.div`
+const Skill = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
   gap: .1rem;
-  width: 75px;
+  width: 50px;
   z-index: 99;
-
-  &:hover {
-    transform-origin: center;
-    animation: scale 180ms ease-in-out forwards;
-    @keyframes scale {
-    to {
-      transform: scale(1.3);
-     }
-    }
-  }
-
+  margin: auto;
 
   img {
     height: 40px;
@@ -70,16 +57,6 @@ const Skill = styled.div`
   p {
     font-size: 1rem;
   }
-
-  @media (min-width: 1150px) {
-    width: 85px;
-
-    img {
-    height: 55px;
-    width: 55px;
-    }
-  };
-
 `
 
 const Curve = styled.div`
@@ -103,10 +80,6 @@ const Curve = styled.div`
 `
 
 const Presentation = styled.div`
-  
-`
-
-const Info = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -114,7 +87,7 @@ const Info = styled.div`
   align-items: center;
   margin-top: .3rem;
   z-index: 99;
-  @media (max-width: 700px) {
+  @media (max-width: 820px) {
     flex-direction: column;
 
   }
@@ -144,13 +117,13 @@ const Info = styled.div`
 }
 `
 
-const Photo = styled.img`
+const Photo = styled(motion.img)`
   width: 350px;
   height: 280px;
   object-fit: cover;
   object-position: 100%;
   border-radius: 5%;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   @media (max-width: 700px) {
     width: 290px;
     height: 300px;
@@ -173,6 +146,8 @@ const Skills = styled.div`
   max-width: 727px;
   margin: auto;
   margin-top: 1.5rem;
+  width: 100%;
+  box-shadow: -2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
   h2 {
     font-family: 'Ubuntu Mono';
@@ -180,59 +155,59 @@ const Skills = styled.div`
 `
 
 export default function About () {
+
   return (
     <>
       <SkillsSection>
         <MaxWidth>
           <Reveal>
-          <h1>About me</h1>
+            <h2>About me</h2>
           </Reveal>
           <Presentation>
-            <Info>
-              <Photo src={rickandmorty} alt="" />
+            <Photo whileHover={{scale: 1.03}} src={rickandmorty} alt="" />
+            <div style={{display: 'flex', flexDirection: 'column'}}>
               <p>
                 Passionate about technology, collaborative, interested to work alongside a dynamic team, curious, innovative and eager to learn new technologies. Currently
                 looking for new professional challenges in backend development projects with big impact in human life.
               </p>
-            </Info>
-            <Skills>
-              <h2>
-                some of my skills
-              </h2>
-              <Grid>
-                <Skill>
-                  <img src={reactLogo} alt="React.js"/>
-                  <p>React</p>
-                </Skill>
-                <Skill>
-                  <img src={nextLogo} alt="Next.js" style={{scale: '1.2'}}/>
-                </Skill>
-                <Skill>
-                  <img src={javascriptLogo} alt="Javascript"/>
-                </Skill>
-                <Skill>
-                  <img src={rubyLogo} alt="Ruby"/>
-                </Skill>
-                <Skill>
-                  <img src={rubyonrailsLogo} alt="Ruby on rails"/>
-                </Skill>
-                <Skill>
-                  <img src={postgresqlLogo} alt="PostgreSQL"/>
-                </Skill>
-                <Skill>
-                  <img src={htmlLogo} alt="PostgreSQL"/>
-                </Skill>
-                <Skill>
-                  <img src={cssLogo} alt="PostgreSQL"/>
-                </Skill>
-                <Skill>
-                  <img src={photoshopLogo} alt="PostgreSQL"/>
-                </Skill>
-                <Skill>
-                  <img src={illustratorLogo} alt="PostgreSQL"/>
-                </Skill>
-              </Grid>
-            </Skills>
+              <Skills>
+                <h2>
+                  some of my skills
+                </h2>
+                <Grid>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={reactLogo} alt="React.js"/>
+                  </Skill>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={nextLogo} alt="Next.js" style={{scale: '1.2'}}/>
+                  </Skill>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={javascriptLogo} alt="Javascript"/>
+                  </Skill>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={rubyLogo} alt="Ruby"/>
+                  </Skill>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={rubyonrailsLogo} alt="Ruby on rails"/>
+                  </Skill>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={postgresqlLogo} alt="PostgreSQL"/>
+                  </Skill>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={htmlLogo} alt="PostgreSQL"/>
+                  </Skill>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={cssLogo} alt="PostgreSQL"/>
+                  </Skill>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={photoshopLogo} alt="PostgreSQL"/>
+                  </Skill>
+                  <Skill whileHover={{scale: 1.35}}>
+                    <img src={illustratorLogo} alt="PostgreSQL"/>
+                  </Skill>
+                </Grid>
+              </Skills>
+            </div>
           </Presentation>
         </MaxWidth>
         <Curve>

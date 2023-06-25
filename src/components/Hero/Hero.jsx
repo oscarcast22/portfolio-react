@@ -19,16 +19,16 @@ const Container = styled.section`
   h1 {
     color: ${colors.white};
     align-self: flex-start;
-    font-size: 4em;
-    line-height: 1.5em;
+    font-size: 4rem;
+    line-height: 4.5rem;
     font-weight: 600;
   }
 
   h2 {
     color: ${colors.white};
     align-self: flex-start;
-    font-size: 2em;
-    line-height: 1em;
+    font-size: 2rem;
+    line-height: 2.5rem;
     font-weight: 400;
     flex-direction: row;
   }
