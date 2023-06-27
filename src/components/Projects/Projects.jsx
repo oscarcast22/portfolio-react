@@ -1,13 +1,13 @@
 import styled from "@emotion/styled"
-import postgresqlLogo from '../../assets/Postgresql-icon.svg';
-import rubyLogo from '../../assets/ruby_logo.svg';
-import rubyonrailsLogo from '../../assets/Ruby_On_Rails_Logo.svg';
-import htmlLogo from '../../assets/HTML5.svg';
-import cssLogo from '../../assets/CSS3_logo.svg';
+import postgresqlLogo from '../../assets/icons/Postgresql-icon.svg';
+import rubyLogo from '../../assets/icons/Ruby_logo.png';
+import rubyonrailsLogo from '../../assets/icons/Ruby_On_Rails_Logo.svg';
+import htmlLogo from '../../assets/icons/HTML5.svg';
+import cssLogo from '../../assets/icons/CSS3_logo.svg';
 import twetablescreen from '../../assets/Projects/twetable.png'
 import eatablescreen from '../../assets/Projects/Eatable.png'
-import reactLogo from '../../assets/react.svg';
-import javascriptLogo from '../../assets/JavaScript_logo.svg';
+import reactLogo from '../../assets/icons/react.svg';
+import javascriptLogo from '../../assets/icons/JavaScript_logo.svg';
 import { motion } from "framer-motion";
 
 function Projects() {
