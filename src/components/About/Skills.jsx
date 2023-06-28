@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import reactLogo from '../../assets/icons/react.svg';
 import nextLogo from '../../assets/icons/next-js.svg';
 import javascriptLogo from '../../assets/icons/JavaScript_logo.svg';
@@ -8,12 +8,11 @@ import rubyLogo from '../../assets/icons/Ruby_logo.png';
 import rubyonrailsLogo from '../../assets/icons/Ruby_On_Rails_Logo.svg';
 import htmlLogo from '../../assets/icons/HTML5.svg';
 import cssLogo from '../../assets/icons/CSS3_logo.svg';
-import photoshopLogo from '../../assets/icons/Photoshop_logo.svg';
-import illustratorLogo from '../../assets/icons/Illustrator_icon.svg';
 import apiIcon from '../../assets/icons/api.png';
 import dockerIcon from '../../assets/icons/docker-icon.svg';
 import githubIcon from '../../assets/icons/github-cat.svg';
 import sqlIcon from '../../assets/icons/sql-database.svg';
+import {useRef, useEffect} from 'react'
 
 const Grid = styled(motion.div)`
   display: grid;
@@ -88,18 +87,32 @@ const item = {
 
 function Skills() {
 
+  const text = 'Some of my skills'
+
   return(
     <SkillsSection
     variants={container}
     initial="hidden"
-    animate='visible'
+    whileInView="visible"
+    viewport={{ once: true }}
     >
       <h2>
-        some of my skills
+        <motion.div>
+          {text.split("").map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.2, delay: index * 0.1 }}
+            >
+              {letter}
+            </motion.span>
+          ))}
+        </motion.div>
       </h2>
       <Grid>
-        <Skill 
-        whileHover={{scale: 1.35}} variants={item}>
+        <Skill whileHover={{scale: 1.35}} variants={item}>
           <img src={reactLogo} alt="React.js"/>
         </Skill>
         <Skill whileHover={{scale: 1.35}} variants={item}>

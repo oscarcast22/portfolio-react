@@ -11,32 +11,79 @@ import javascriptLogo from '../../assets/icons/JavaScript_logo.svg';
 import { motion } from "framer-motion";
 
 function Projects() {
+
+  const text = 'My Projects';
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
   return(
     <ProjectsContainer>
-      <h1>Some of my Projects</h1>
+      <h1>
+        <motion.div>
+          {text.split("").map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.2, delay: index * 0.1 }}
+            >
+              {letter}
+            </motion.span>
+          ))}
+        </motion.div>
+      </h1>
       <ProjectsGrid>
-        <Project>
-          <Card>
-            <ProjectImage src={twetablescreen} alt="Twetable" />
-            <h2>Twetable</h2>
+        <Project
+         variants={container}
+         initial="hidden"
+         whileInView="visible"
+         viewport={{ once: true }}
+        >
+          <Card >
+            <ProjectImage variants={item} src={twetablescreen} alt="Twetable" />
+            <motion.h2 variants={item}>Twetable</motion.h2>
             <Tech>
-              <motion.img src={rubyLogo} style={{scale: .8}} alt="" />
-              <motion.img src={rubyonrailsLogo} alt="ruby on rails" style={{ backgroundColor: '#CC0000' }} />
-              <motion.img src={postgresqlLogo} alt="" />
-              <motion.img src={htmlLogo} alt="" />
-              <motion.img src={cssLogo} alt="" />
+              <motion.img variants={item} src={rubyLogo} whileHover={{scale: 1.5}} style={{scale: .8}} alt="" />
+              <motion.img variants={item} src={rubyonrailsLogo} whileHover={{scale: 1.5}} alt="ruby on rails" />
+              <motion.img variants={item} src={postgresqlLogo} alt="" />
+              <motion.img variants={item} src={htmlLogo} alt="" />
+              <motion.img variants={item} src={cssLogo} alt="" />
             </Tech>
           </Card>
         </Project>
-        <Project>
+        <Project
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <Card>
-            <ProjectImage src={eatablescreen} alt="Twetable" />
-            <h2>Eatable</h2>
+            <ProjectImage variants={item}  src={eatablescreen} alt="Twetable" />
+            <motion.h2 variants={item}>Eatable</motion.h2>
             <Tech>
-              <motion.img src={reactLogo} alt="" />
-              <motion.img src={javascriptLogo} alt="ruby on rails" style={{ padding: '1%', fill: "red"}} />
-              <motion.img src={htmlLogo} alt="" />
-              <motion.img src={cssLogo} alt="" />
+              <motion.img variants={item} src={reactLogo} alt="" />
+              <motion.img variants={item} src={javascriptLogo} alt="" style={{ padding: '1%' }} />
+              <motion.img variants={item} src={htmlLogo} alt="" />
+              <motion.img variants={item} src={cssLogo} alt="" />
             </Tech>
           </Card>
         </Project>
@@ -62,6 +109,10 @@ const ProjectsContainer = styled.section`
 
   h1 {
     z-index: 2;
+    font-family: 'Ubuntu Mono';
+    font-size: 1.8rem;
+    font-weight: 400;
+    filter: drop-shadow( -2px .7px 1.6px #000000a1 );
   }
 `
 
@@ -72,10 +123,11 @@ const ProjectsGrid = styled.div`
   grid-gap: 30px;
   width: -moz-available;          
   width: -webkit-fill-available; 
-  z-index: 1;
+  z-index: 90;
 `
 
-const Project = styled.div`
+const Project = styled(motion.div)`
+  z-index: 90;
 `
 
 const Card = styled.div`
@@ -110,9 +162,13 @@ const Tech = styled.div`
     height: 2rem;
     width: 2rem;
   }
+
+  img:hover{
+    scale: 1.5;
+  }
 `
 
-const ProjectImage = styled.img`
+const ProjectImage = styled(motion.img)`
   width: 100%;
   max-height: 200px;
   object-fit: cover;

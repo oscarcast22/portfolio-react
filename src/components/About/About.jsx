@@ -120,7 +120,6 @@ const container = {
 
 export default function About () {
 
-
   return (
     <>
       <AboutSection>
@@ -135,14 +134,18 @@ export default function About () {
               whileHover={{scale: 1.03}}
               variants={container}
               initial="hidden"
-              animate='visible'
-              src={rickandmorty} alt="" />
+              whileInView="visible"
+              viewport={{ once: true }}
+              src={rickandmorty} alt="" 
+              />
             <div style={{display: 'flex', flexDirection: 'column'}}>
               <motion.p
               whileHover={{scale: 1.03}}
               variants={container}
               initial="hidden"
-              animate='visible'>
+              whileInView="visible"
+              viewport={{ once: true }}
+              >
                 Passionate about technology, collaborative, interested to work alongside a dynamic team, curious, innovative and eager to learn new technologies. Currently
                 looking for new professional challenges in backend development projects with big impact in human life.
               </motion.p>
