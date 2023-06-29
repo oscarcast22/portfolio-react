@@ -1,6 +1,7 @@
 import { useForm, ValidationError } from '@formspree/react';
 import styled from "@emotion/styled";
 
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
