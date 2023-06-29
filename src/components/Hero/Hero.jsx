@@ -19,8 +19,8 @@ const Container = styled.section`
   h1 {
     color: ${colors.white};
     align-self: flex-start;
-    font-size: 4rem;
-    line-height: 4.5rem;
+    font-size: 5rem;
+    line-height: 6rem;
     font-weight: 600;
   }
 

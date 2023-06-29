@@ -1,11 +1,13 @@
-import styled from "@emotion/styled"
+import styled from "@emotion/styled";
 import postgresqlLogo from '../../assets/icons/Postgresql-icon.svg';
 import rubyLogo from '../../assets/icons/Ruby_logo.png';
 import rubyonrailsLogo from '../../assets/icons/Ruby_On_Rails_Logo.svg';
 import htmlLogo from '../../assets/icons/HTML5.svg';
 import cssLogo from '../../assets/icons/CSS3_logo.svg';
-import twetablescreen from '../../assets/Projects/twetable.png'
-import eatablescreen from '../../assets/Projects/Eatable.png'
+import twetablescreen from '../../assets/Projects/twetable.png';
+import eatablescreen from '../../assets/Projects/Eatable.png';
+import doablescreen from '../../assets/Projects/doable.png';
+import cliviascreen from '../../assets/Projects/CLIvia-Generator.png';
 import reactLogo from '../../assets/icons/react.svg';
 import javascriptLogo from '../../assets/icons/JavaScript_logo.svg';
 import { motion } from "framer-motion";
@@ -34,60 +36,120 @@ function Projects() {
     }
   };
 
+  const hoverAnimation = {
+    scale: 1.05,
+    objectPosition: ["left 0%", "left 100%"],
+    transition: {
+      duration: 3,
+    },
+  };
+
   return(
     <ProjectsContainer>
-      <h1>
-        <motion.div>
-          {text.split("").map((letter, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.2, delay: index * 0.1 }}
-            >
-              {letter}
-            </motion.span>
-          ))}
-        </motion.div>
-      </h1>
-      <ProjectsGrid>
-        <Project
-         variants={container}
-         initial="hidden"
-         whileInView="visible"
-         viewport={{ once: true }}
-        >
-          <Card >
-            <ProjectImage variants={item} src={twetablescreen} alt="Twetable" />
-            <motion.h2 variants={item}>Twetable</motion.h2>
-            <Tech>
-              <motion.img variants={item} src={rubyLogo} whileHover={{scale: 1.5}} style={{scale: .8}} alt="" />
-              <motion.img variants={item} src={rubyonrailsLogo} whileHover={{scale: 1.5}} alt="ruby on rails" />
-              <motion.img variants={item} src={postgresqlLogo} alt="" />
-              <motion.img variants={item} src={htmlLogo} alt="" />
-              <motion.img variants={item} src={cssLogo} alt="" />
-            </Tech>
-          </Card>
-        </Project>
-        <Project
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Card>
-            <ProjectImage variants={item}  src={eatablescreen} alt="Twetable" />
-            <motion.h2 variants={item}>Eatable</motion.h2>
-            <Tech>
-              <motion.img variants={item} src={reactLogo} alt="" />
-              <motion.img variants={item} src={javascriptLogo} alt="" style={{ padding: '1%' }} />
-              <motion.img variants={item} src={htmlLogo} alt="" />
-              <motion.img variants={item} src={cssLogo} alt="" />
-            </Tech>
-          </Card>
-        </Project>
-      </ProjectsGrid>
+      <MaxWidth>
+        <h1>
+          <motion.div>
+            {text.split("").map((letter, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.2, delay: index * 0.1 }}
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </motion.div>
+        </h1>
+        <ProjectsGrid>
+          <Project
+           variants={container}
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true }}
+          >
+            <Card >
+              <ProjectImage 
+                variants={item} 
+                whileHover={hoverAnimation}
+                src={twetablescreen} 
+                alt="Twetable" 
+              />
+              <motion.h2 variants={item}>Twetable</motion.h2>
+              <Tech>
+                <motion.img variants={item} src={rubyLogo} whileHover={{scale: 1.2}} alt="" />
+                <motion.img variants={item} src={rubyonrailsLogo} whileHover={{scale: 1.2}} alt="ruby on rails" />
+                <motion.img variants={item} src={postgresqlLogo} whileHover={{scale: 1.2}} alt="" />
+                <motion.img variants={item} src={htmlLogo} whileHover={{scale: 1.2}} alt="" />
+                <motion.img variants={item} src={cssLogo} whileHover={{scale: 1.2}} alt="" />
+              </Tech>
+            </Card>
+          </Project>
+          <Project
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <Card>
+              <ProjectImage 
+                variants={item}  
+                whileHover={hoverAnimation}
+                src={eatablescreen} 
+                alt="Eatable" 
+              />
+              <motion.h2 variants={item}>Eatable</motion.h2>
+              <Tech>
+                <motion.img variants={item} src={reactLogo} whileHover={{scale: 1.2}} alt="" />
+                <motion.img variants={item} src={javascriptLogo} whileHover={{scale: 1.2}} alt="" style={{ padding: '1%' }} />
+                <motion.img variants={item} src={htmlLogo} whileHover={{scale: 1.2}} alt="" />
+                <motion.img variants={item} src={cssLogo} whileHover={{scale: 1.2}} alt="" />
+              </Tech>
+            </Card>
+          </Project>
+          <Project
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <Card>
+              <ProjectImage 
+                variants={item}  
+                whileHover={hoverAnimation}
+                src={doablescreen} 
+                alt="Doable" 
+              />
+              <motion.h2 variants={item}>Doable</motion.h2>
+              <Tech>
+                <motion.img variants={item} src={javascriptLogo} whileHover={{scale: 1.2}} alt="" style={{ padding: '1%' }} />
+                <motion.img variants={item} src={htmlLogo} whileHover={{scale: 1.2}} alt="" />
+                <motion.img variants={item} src={cssLogo} whileHover={{scale: 1.2}} alt="" />
+              </Tech>
+            </Card>
+          </Project>
+          <Project
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <Card>
+              <ProjectImage 
+                variants={item}  
+                whileHover={hoverAnimation}
+                src={cliviascreen} 
+                alt="ClIvia generator" 
+              />
+              <motion.h2 variants={item}>CLIvia Generator</motion.h2>
+              <Tech>
+                <motion.img variants={item} src={rubyLogo} whileHover={{scale: 1.2}} alt="" style={{ padding: '1%' }} />
+              </Tech>
+            </Card>
+          </Project>
+        </ProjectsGrid>
+      </MaxWidth>
     </ProjectsContainer>
 
   )
@@ -105,7 +167,8 @@ const ProjectsContainer = styled.section`
   align-items: center;
   gap: 1.5rem;
   background-color: #5f5f5f;
-  z-index: -1;
+  z-index: 0;
+  text-align: center;
 
   h1 {
     z-index: 2;
@@ -113,7 +176,13 @@ const ProjectsContainer = styled.section`
     font-size: 1.8rem;
     font-weight: 400;
     filter: drop-shadow( -2px .7px 1.6px #000000a1 );
+    margin-bottom: 1rem;
   }
+`
+
+const MaxWidth = styled.div`
+  width: 100%;
+  max-width: 1200px;
 `
 
 const ProjectsGrid = styled.div`
@@ -148,7 +217,7 @@ const Card = styled.div`
   p {
     margin-bottom: .4rem;
   }
-
+   
 `
 
 const Tech = styled.div`
@@ -162,17 +231,13 @@ const Tech = styled.div`
     height: 2rem;
     width: 2rem;
   }
-
-  img:hover{
-    scale: 1.5;
-  }
 `
 
 const ProjectImage = styled(motion.img)`
   width: 100%;
-  max-height: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 5%;
-
+  object-position: left 0%;
 `
 

@@ -81,8 +81,8 @@ const Presentation = styled.div`
 `
 
 const Photo = styled(motion.img)`
-  width: 350px;
-  height: 280px;
+  width: 300px;
+  height: 350px;
   object-fit: cover;
   object-position: 100%;
   border-radius: 5%;
