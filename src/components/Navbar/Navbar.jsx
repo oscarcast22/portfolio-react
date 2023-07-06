@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
+import BurgerMenu from './BurgerMenu';
 
-const NavSection = styled.nav`
+const NavSection = styled.section`
   backdrop-filter: blur(35px);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 80;
   width: 100%;
   padding: 5%;
   padding-top: 1.2rem;
@@ -13,11 +14,13 @@ const NavSection = styled.nav`
 
 `
 
-const Menu = styled.ul`
-  display: flex;
-  justify-content: left;
-  gap: 15px;
-  padding: 0;
+const Nav = styled.nav`
+
+  li {
+    float: left;
+    text-align: center;
+    width: 5em;
+  }
 `
 
 const MaxWidth = styled.div`
@@ -31,16 +34,21 @@ const MaxWidth = styled.div`
 
 function Navbar() {
     return (
+      <>
+      <BurgerMenu/>
       <NavSection>
         <MaxWidth>
-         <Menu>
-           <li>Home</li>
-           <li>About</li>
-           <li>Contact</li>
-         </Menu>
-         <p>Oscar</p>
+          <p>Oscar</p>
+          <Nav>
+           <ul>
+             <li>Home</li>
+             <li>About</li>
+             <li>Contact</li>
+           </ul>
+          </Nav>
         </MaxWidth>
       </NavSection>
+      </>
     );
   }
   
