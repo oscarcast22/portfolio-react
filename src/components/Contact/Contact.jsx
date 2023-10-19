@@ -12,7 +12,6 @@ function Contact() {
 }
 
 const ContactSection = styled.section`
-  position: relative;
   padding: 5%;
   padding-bottom: 5rem;
   padding-top: 1.5rem;

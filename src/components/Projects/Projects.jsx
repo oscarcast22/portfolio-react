@@ -11,10 +11,13 @@ import cliviascreen from '../../assets/Projects/CLIvia-Generator.png';
 import reactLogo from '../../assets/icons/react.svg';
 import javascriptLogo from '../../assets/icons/JavaScript_logo.svg';
 import { motion } from "framer-motion";
+import { useState } from "react";
+import Eatable from "./Eatable";
 
 function Projects() {
 
   const text = 'My Projects';
+  const [showEatable, setShowEatable] = useState(false);
 
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -46,6 +49,7 @@ function Projects() {
 
   return(
     <ProjectsContainer>
+      <Eatable showEatable={showEatable} setShowEatable={setShowEatable}/>
       <MaxWidth>
         <h1>
           <motion.div>
@@ -92,7 +96,7 @@ function Projects() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <Card>
+            <Card onClick={()=>setShowEatable(true)}>
               <ProjectImage 
                 variants={item}  
                 whileHover={hoverAnimation}

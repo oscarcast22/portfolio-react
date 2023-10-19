@@ -2,12 +2,14 @@ import styled from '@emotion/styled'
 import BurgerMenu from './BurgerMenu';
 
 const NavSection = styled.section`
+  display: none;
   backdrop-filter: blur(35px);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 80;
   width: 100%;
+  height: 70px;
   padding: 5%;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;

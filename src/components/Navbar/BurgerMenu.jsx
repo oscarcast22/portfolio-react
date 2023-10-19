@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
-import { Navigation } from "./Navigation";
+import  Navigation from "./Navigation";
 import styled from "@emotion/styled";
 
 const sidebar = {
@@ -31,7 +31,6 @@ const SideBar = styled(motion.div)`
   left: 0;
   bottom: 0;
   width: 330px;
-  height: 100vh;
 `
 
 const Nav = styled(motion.nav)`
@@ -41,12 +40,6 @@ const Nav = styled(motion.nav)`
   bottom: 0;
   width: 300px;
   z-index: 90;
-  display: none;
-
-  @media(max-width: 780px) {
-    display: block;
-    
-  }
 
   button {
     outline: none;
@@ -95,9 +88,12 @@ function BurgerMenu() {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       ref={containerRef}
+      style={{
+        height: isOpen ? "100vh" : `80px`
+      }}
     >
       <SideBar variants={sidebar} />
-      <Navigation />
+      <Navigation isOpen={isOpen}/>
       <MenuToggle toggle={() => toggleOpen()} />
     </Nav>
   );
