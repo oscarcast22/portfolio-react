@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import Reveal from "../Animations/Reveal";
-import rickandmorty from '../../assets/rick-and-morty.gif';
 import { motion } from "framer-motion";
 import Skills from './Skills';
 
@@ -84,7 +83,6 @@ const Photo = styled(motion.img)`
   width: 300px;
   height: 350px;
   object-fit: cover;
-  object-position: 100%;
   border-radius: 5%;
   box-shadow: -2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   @media (max-width: 700px) {
@@ -136,7 +134,7 @@ export default function About () {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              src={rickandmorty} alt="" 
+              src='https://i.ibb.co/T2nZGyg/Oscar.jpg'alt="" 
               />
             <div style={{display: 'flex', flexDirection: 'column'}}>
               <motion.p

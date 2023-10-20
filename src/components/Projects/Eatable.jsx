@@ -125,11 +125,10 @@ const Eatable = ({showEatable, setShowEatable}) => {
               <img src={circlexmark} alt="" onClick={() => setShowEatable(false)} />
             </Title>
             <p>
-              Cree una aplicación web que presenta platillos, interactuando con una API Rest para ofrecer una experiencia 
-              fluida y atractiva. Utilicé React.js para el frontend, asegurando un 
-              rendimiento óptimo y una interfaz dinámica. Combinado con HTML y 
-              CSS, esta implementación demostró mi habilidad para construir 
-              aplicaciones web modernas y visualmente atractivas, mientras optimizo el consumo de datos externos a traves de una API.
+              I developed a web application using React.js. This app offers an experience similar to food delivery apps like Rappi or Didi Food. The application showcases a variety of dishes and connects to a REST API to provide a smooth and engaging user experience. My focus was on ensuring optimal performance and a dynamic interface for an exceptional user experience.
+            </p>
+            <p>
+            This implementation, which integrates HTML, JavaScript, and CSS, demonstrates my ability to build modern and visually appealing web applications by consuming external APIs.
             </p>
             <Links>
               <div>
