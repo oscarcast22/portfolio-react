@@ -4,7 +4,7 @@ import { colors } from './colors';
 import { fonts } from './typography';
 
 export const reset = css`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Ubuntu+Mono&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Ubuntu+Mono&display=swap');
   /* Box sizing rules */
   *,
   *::before,
