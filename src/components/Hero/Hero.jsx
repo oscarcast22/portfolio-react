@@ -73,7 +73,6 @@ const Curve = styled.div`
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  z-index: 1;
 
   svg {
     position: relative;
@@ -88,7 +87,7 @@ function Hero() {
   return (
     <>
       <Container>
-        <div style={{width: '100%', maxWidth: '1200px', margin: 'auto', zIndex: 3}}>
+        <div style={{width: '100%', maxWidth: '1200px', margin: 'auto'}}>
           <Dotgrid></Dotgrid>
           <Presentation/>
         </div>

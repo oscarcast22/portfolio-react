@@ -121,7 +121,7 @@ const Twetable = ({showTwetable, setShowTwetable}) => {
             variants={modal}
           >
             <Title>
-              <h2>Twetable</h2>
+              <h2>Tweetable</h2>
               <img src={circlexmark} alt="" onClick={() => setShowTwetable(false)} />
             </Title>
             <p>
@@ -131,12 +131,12 @@ const Twetable = ({showTwetable, setShowTwetable}) => {
               I implemented the MVC {`(Model-View-Controller)`} design pattern and i create the database using PostgreSQL. I handled all CRUD operations using Ruby on Rails, including user identification and authentication, likes, tweets, retweets, and followers.
             </p>
             <p>
-              This experience allowed me to strengthen my skills as a full-stack developer, tackling challenges in both the frontend and backend. I am proud of the outcome and excited about the possibilities this application offers to enhance the online user experience.
+              This experience allowed me to strengthen my skills as a full-stack developer, tackling challenges in both the frontend and backend.
             </p>
             <Links>
               <div>
                 <img style={{width:'30px'}} src={githubIcon} alt="" />
-                <a href="https://github.com/codeableorg/tweetable-OscarCast22" target="blank">Repo</a>
+                <a href="https://github.com/oscarcast22/tweetable-rails" target="blank">Repo</a>
               </div>
               <div>
                 <img style={{width:'20px'}} src={figmaLogo} alt="" />

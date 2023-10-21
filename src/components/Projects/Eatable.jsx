@@ -134,7 +134,7 @@ const Eatable = ({showEatable, setShowEatable}) => {
             <Links>
               <div>
                 <img style={{width:'30px'}} src={githubIcon} alt="" />
-                <a href="https://github.com/codeableorg/react-eatable-oscarcast22" target="blank">Repo</a>
+                <a href="https://github.com/oscarcast22/eatable-react" target="blank">Repo</a>
               </div>
               <div>
                 <img style={{width:'20px'}} src={figmaLogo} alt="" />

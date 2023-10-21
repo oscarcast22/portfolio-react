@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import ContactForm from "./ContactForm";
+import Reveal from "../Animations/Reveal";
 
 function Contact() {
   return(
@@ -21,15 +22,12 @@ const ContactSection = styled.section`
   align-items: center;
   gap: 1.5rem;
   background-color: #7a7a7a;
-  z-index: 0;
   text-align: center;
 
   h1 {
-    z-index: 2;
     font-family: 'Ubuntu Mono';
     font-size: 1.8rem;
     font-weight: 400;
-    filter: drop-shadow( -2px .7px 1.6px #000000a1 );
     margin-bottom: 1rem;
   }
 `
