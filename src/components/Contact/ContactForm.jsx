@@ -8,24 +8,54 @@ const Form = styled.form`
   max-width: 980px;
   margin: auto;
   gap: .3rem;
+
+  button{
+    width: 80px;
+  }
 `
 
 const Label = styled.label`
   text-align: left;
+  font-weight: 500;
+  font-size: 1.2rem;
 `
 
 const Input = styled.input`
-  
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #b6b6b6;
+  color: white;
 `
 
 const Info = styled.div`
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  margin-bottom: 20px;
 `
 
 const Field = styled.div`
   display: flex;
   flex-direction: column;
+`
+
+const Textarea = styled.textarea`
+  height: 180px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #b6b6b6;
+  color: white;
+`
+
+const Button = styled.button`
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 7px;
+  border: none;
 `
 
 function ContactForm() {
@@ -54,11 +84,11 @@ function ContactForm() {
       <Label htmlFor="message">
         Message
       </Label>
-      <textarea id="message" name="message" required/>
+      <Textarea id="message" name="message" required/>
       <ValidationError prefix="Message" field="message" errors={state.errors}/>
-      <button type="submit" disabled={state.submitting}>
+      <Button type="submit" disabled={state.submitting}>
         Submit
-      </button>
+      </Button>
     </Form>
   );
 }

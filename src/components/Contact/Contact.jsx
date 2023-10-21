@@ -5,6 +5,7 @@ function Contact() {
   return(
     <ContactSection>
       <MaxWidth>
+        <h1>Contact me</h1>
         <ContactForm/>
       </MaxWidth>
     </ContactSection>

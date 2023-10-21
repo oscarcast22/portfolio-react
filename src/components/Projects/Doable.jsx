@@ -1,15 +1,16 @@
 import styled from "@emotion/styled";
 import { motion, AnimatePresence } from "framer-motion"
 import circlexmark from '../../assets/circle-xmark-regular.svg';
-import eatablescreen from '../../assets/Projects/Eatable.png';
-import eatablescreen3 from '../../assets/Projects/Eatable3.png';
-import eatablescreen4 from '../../assets/Projects/Eatable4.png';
-import eatablescreen5 from '../../assets/Projects/Eatable5.png';
-import eatablescreen6 from '../../assets/Projects/Eatable6.png';
+import doablescreen1 from '../../assets/Projects/Doable/Doable1.png';
+import doablescreen2 from '../../assets/Projects/Doable/Doable2.png';
+import doablescreen3 from '../../assets/Projects/Doable/Doable3.png';
+import doablescreen4 from '../../assets/Projects/Doable/Doable4.png';
+import doablescreen5 from '../../assets/Projects/Doable/Doable5.png';
+import doablescreen6 from '../../assets/Projects/Doable/Doable6.png';
 import githubIcon from '../../assets/icons/github-cat.svg';
 import figmaLogo from '../../assets/icons/Figma-logo.svg';
 
-const Eatable = ({showEatable, setShowEatable}) => {
+const Doable = ({showDoable, setShowDoable}) => {
 
   const Backdrop = styled(motion.div)`
     position: fixed;
@@ -81,7 +82,7 @@ const Eatable = ({showEatable, setShowEatable}) => {
 
     img{
       min-width: 300px;
-      height: 649px ;
+      height: 537px ;
       border-radius: 15px;
       box-shadow: -3px 3px 9px 1px rgba(0, 0, 0, 0.2);
     }
@@ -111,7 +112,7 @@ const Eatable = ({showEatable, setShowEatable}) => {
 
   return (
     <AnimatePresence >
-      { showEatable && (
+      { showDoable && (
         <Backdrop
           variants={backdrop}
           initial='hidden'
@@ -122,31 +123,32 @@ const Eatable = ({showEatable, setShowEatable}) => {
             variants={modal}
           >
             <Title>
-              <h2>Eatable</h2>
-              <img src={circlexmark} alt="" onClick={() => setShowEatable(false)} />
+              <h2>Doable</h2>
+              <img src={circlexmark} alt="" onClick={() => setShowDoable(false)} />
             </Title>
             <p>
-              I developed a web application using React.js, this app offers an experience similar to food delivery apps like Rappi or Didi Food. The application showcases a variety of dishes and connects to a REST API to provide a smooth and engaging user experience. My focus was on ensuring optimal performance and a dynamic interface for an exceptional user experience.
+              In order to enhance task organization efficiency, I designed and developed a web application from scratch. In this project, I utilized pure JavaScript for interactivity and combined this technology with HTML and CSS to create an intuitive and appealing interface. The application also features user authentication functionalities and employs local storage to store tasks and their statuses.
             </p>
             <p>
-              This implementation, which integrates HTML, JavaScript, and CSS, demonstrates my ability to build modern and visually appealing web applications by consuming external APIs.
+              This experience highlighted my ability to translate practical needs into functional and user-friendly digital solutions.
             </p>
             <Links>
               <div>
                 <img style={{width:'30px'}} src={githubIcon} alt="" />
-                <a href="https://github.com/codeableorg/react-eatable-oscarcast22" target="blank">Repo</a>
+                <a href="https://github.com/codeableorg/doable-js-OscarCast22" target="blank">Repo</a>
               </div>
               <div>
                 <img style={{width:'20px'}} src={figmaLogo} alt="" />
-                <a href="https://www.figma.com/file/9iX52juOI5ZghyewK0svxO/Eatable?type=design&node-id=2160-162&mode=design&t=p6cdMyw2h5DqHLhe-0" target="blank">Figma</a>
+                <a href="https://www.figma.com/file/NNdVoofP8u1kqw3zXAIkek/Doable?type=design&node-id=0-1&mode=design&t=GC09ksiIpfi7H768-0" target="blank">Figma</a>
               </div>
             </Links>
             <ScreenGrid>
-              <img src={eatablescreen3} alt="" />
-              <img src={eatablescreen} alt="" />
-              <img src={eatablescreen4} alt="" />
-              <img src={eatablescreen5} alt="" />
-              <img src={eatablescreen6} alt="" />
+              <img src={doablescreen1} alt="" />
+              <img src={doablescreen2} alt="" />
+              <img src={doablescreen3} alt="" />
+              <img src={doablescreen4} alt="" />
+              <img src={doablescreen5} alt="" />
+              <img src={doablescreen6} alt="" />
             </ScreenGrid>
           </Modal>
         </Backdrop>
@@ -155,4 +157,4 @@ const Eatable = ({showEatable, setShowEatable}) => {
   );
 }
 
-export default Eatable;
+export default Doable;

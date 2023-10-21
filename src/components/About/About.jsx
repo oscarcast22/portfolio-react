@@ -138,11 +138,11 @@ export default function About () {
               />
             <div style={{display: 'flex', flexDirection: 'column'}}>
               <motion.p
-              whileHover={{scale: 1.03}}
-              variants={container}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
+                whileHover={{scale: 1.03}}
+                variants={container}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
                 Passionate about technology, collaborative, interested to work alongside a dynamic team, curious, innovative and eager to learn new technologies. Currently
                 looking for new professional challenges in backend development projects with big impact in human life.

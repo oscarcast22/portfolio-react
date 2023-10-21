@@ -13,11 +13,15 @@ import javascriptLogo from '../../assets/icons/JavaScript_logo.svg';
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Eatable from "./Eatable";
+import Twetable from "./Twetable";
+import Doable from "./Doable";
 
 function Projects() {
 
   const text = 'My Projects';
   const [showEatable, setShowEatable] = useState(false);
+  const [showTwetable, setShowTwetable] = useState(false);
+  const [showDoable, setShowDoable] = useState(false);
 
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -50,6 +54,9 @@ function Projects() {
   return(
     <ProjectsContainer>
       <Eatable showEatable={showEatable} setShowEatable={setShowEatable}/>
+      <Twetable showTwetable={showTwetable} setShowTwetable={setShowTwetable}/>
+      <Doable showDoable={showDoable} setShowDoable={setShowDoable}/>
+
       <MaxWidth>
         <h1>
           <motion.div>
@@ -73,7 +80,7 @@ function Projects() {
            whileInView="visible"
            viewport={{ once: true }}
           >
-            <Card >
+            <Card onClick={()=>setShowTwetable(true)} >
               <ProjectImage 
                 variants={item} 
                 whileHover={hoverAnimation}
@@ -118,7 +125,7 @@ function Projects() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <Card>
+            <Card onClick={()=>setShowDoable(true)}>
               <ProjectImage 
                 variants={item}  
                 whileHover={hoverAnimation}
@@ -230,6 +237,7 @@ const Project = styled(motion.div)`
 
 const Card = styled.div`
   background-color: #242424;
+  cursor: pointer;
   border-radius: 4%;
   margin: auto;
   display: flex;

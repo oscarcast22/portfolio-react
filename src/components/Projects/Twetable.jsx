@@ -1,15 +1,14 @@
 import styled from "@emotion/styled";
 import { motion, AnimatePresence } from "framer-motion"
 import circlexmark from '../../assets/circle-xmark-regular.svg';
-import eatablescreen from '../../assets/Projects/Eatable.png';
-import eatablescreen3 from '../../assets/Projects/Eatable3.png';
-import eatablescreen4 from '../../assets/Projects/Eatable4.png';
-import eatablescreen5 from '../../assets/Projects/Eatable5.png';
-import eatablescreen6 from '../../assets/Projects/Eatable6.png';
+import twetablescreen1 from '../../assets/Projects/Twetable/Twetable1.png';
+import twetablescreen2 from '../../assets/Projects/Twetable/Twetable2.png';
+import twetablescreen3 from '../../assets/Projects/Twetable/Twetable3.png';
+import twetablescreen4 from '../../assets/Projects/Twetable/Twetable4.png';
 import githubIcon from '../../assets/icons/github-cat.svg';
 import figmaLogo from '../../assets/icons/Figma-logo.svg';
 
-const Eatable = ({showEatable, setShowEatable}) => {
+const Twetable = ({showTwetable, setShowTwetable}) => {
 
   const Backdrop = styled(motion.div)`
     position: fixed;
@@ -111,7 +110,7 @@ const Eatable = ({showEatable, setShowEatable}) => {
 
   return (
     <AnimatePresence >
-      { showEatable && (
+      { showTwetable && (
         <Backdrop
           variants={backdrop}
           initial='hidden'
@@ -122,31 +121,33 @@ const Eatable = ({showEatable, setShowEatable}) => {
             variants={modal}
           >
             <Title>
-              <h2>Eatable</h2>
-              <img src={circlexmark} alt="" onClick={() => setShowEatable(false)} />
+              <h2>Twetable</h2>
+              <img src={circlexmark} alt="" onClick={() => setShowTwetable(false)} />
             </Title>
             <p>
-              I developed a web application using React.js, this app offers an experience similar to food delivery apps like Rappi or Didi Food. The application showcases a variety of dishes and connects to a REST API to provide a smooth and engaging user experience. My focus was on ensuring optimal performance and a dynamic interface for an exceptional user experience.
+              I have developed a web application inspired by the functionality of Twitter, utilizing a mix of technologies including Ruby on Rails, HTML, and CSS. My approach covered all aspects of web development, from creating the interface to managing the database.
             </p>
             <p>
-              This implementation, which integrates HTML, JavaScript, and CSS, demonstrates my ability to build modern and visually appealing web applications by consuming external APIs.
+              I implemented the MVC {`(Model-View-Controller)`} design pattern and i create the database using PostgreSQL. I handled all CRUD operations using Ruby on Rails, including user identification and authentication, likes, tweets, retweets, and followers.
+            </p>
+            <p>
+              This experience allowed me to strengthen my skills as a full-stack developer, tackling challenges in both the frontend and backend. I am proud of the outcome and excited about the possibilities this application offers to enhance the online user experience.
             </p>
             <Links>
               <div>
                 <img style={{width:'30px'}} src={githubIcon} alt="" />
-                <a href="https://github.com/codeableorg/react-eatable-oscarcast22" target="blank">Repo</a>
+                <a href="https://github.com/codeableorg/tweetable-OscarCast22" target="blank">Repo</a>
               </div>
               <div>
                 <img style={{width:'20px'}} src={figmaLogo} alt="" />
-                <a href="https://www.figma.com/file/9iX52juOI5ZghyewK0svxO/Eatable?type=design&node-id=2160-162&mode=design&t=p6cdMyw2h5DqHLhe-0" target="blank">Figma</a>
+                <a href="https://www.figma.com/file/B7aydkPtCKfmlP8HxwwXng/Tweetable?type=design&node-id=2201-5682&mode=design&t=zz5c1BhBMhNQkW0G-0" target="blank">Figma</a>
               </div>
             </Links>
             <ScreenGrid>
-              <img src={eatablescreen3} alt="" />
-              <img src={eatablescreen} alt="" />
-              <img src={eatablescreen4} alt="" />
-              <img src={eatablescreen5} alt="" />
-              <img src={eatablescreen6} alt="" />
+              <img src={twetablescreen1} alt="" />
+              <img src={twetablescreen2} alt="" />
+              <img src={twetablescreen3} alt="" />
+              <img src={twetablescreen4} alt="" />
             </ScreenGrid>
           </Modal>
         </Backdrop>
@@ -155,4 +156,4 @@ const Eatable = ({showEatable, setShowEatable}) => {
   );
 }
 
-export default Eatable;
+export default Twetable;
