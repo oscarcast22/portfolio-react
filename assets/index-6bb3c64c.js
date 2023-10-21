@@ -623,6 +623,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   flex-direction: row;
   gap: 20px;
   margin-bottom: 20px;
+  @media (max-width: 485px) {
+    flex-direction: column;
+  }
 `,jp=b.div`
   display: flex;
   flex-direction: column;
