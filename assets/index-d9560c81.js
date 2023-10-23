@@ -86,7 +86,6 @@ Error generating stack: `+o.message+`
   margin: auto;
   position: relative;
   padding: 5%;
-  padding-top: 60px;
   background-color: #1d1d1df2;
 
 
@@ -150,7 +149,7 @@ Error generating stack: `+o.message+`
     width: calc(122% + 1.3px);
     height: 130px;
   }
-`;function XC(){return y.jsx(y.Fragment,{children:y.jsxs(KC,{children:[y.jsxs("div",{style:{width:"100%",maxWidth:"1200px",margin:"auto"},children:[y.jsx(QC,{}),y.jsx(GC,{})]}),y.jsx(YC,{children:y.jsx("svg",{"data-name":"Layer 1",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 1200 120",preserveAspectRatio:"none",children:y.jsx("path",{d:"M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z",style:{fill:"#4d4d4d"}})})})]})})}const Ly="/portfolio-react/assets/react-35ef61ed.svg",ZC="/portfolio-react/assets/next-js-cab09f82.svg",cu="/portfolio-react/assets/JavaScript_logo-9a935d73.svg",My="/portfolio-react/assets/Postgresql-icon-fe85bc84.svg",fu="/portfolio-react/assets/Ruby_logo-eb3d42ca.png",_y="/portfolio-react/assets/Ruby_On_Rails_Logo-85c37690.svg",bo="/portfolio-react/assets/HTML5-6e3fc583.svg",Do="/portfolio-react/assets/CSS3_logo-bc8bddbd.svg",qC="/portfolio-react/assets/api-fbdeeb7f.png",JC="/portfolio-react/assets/docker-icon-2708ff00.svg",oa="/portfolio-react/assets/github-cat-7a0dd11e.svg",eP="/portfolio-react/assets/sql-database-d63f47b6.svg",tP=b(I.div)`
+`;function XC(){return y.jsx(y.Fragment,{children:y.jsxs(KC,{children:[y.jsxs("div",{style:{width:"100%",maxWidth:"1200px",margin:"auto",marginBottom:"60px"},children:[y.jsx(QC,{}),y.jsx(GC,{})]}),y.jsx(YC,{children:y.jsx("svg",{"data-name":"Layer 1",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 1200 120",preserveAspectRatio:"none",children:y.jsx("path",{d:"M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z",style:{fill:"#4d4d4d"}})})})]})})}const Ly="/portfolio-react/assets/react-35ef61ed.svg",ZC="/portfolio-react/assets/next-js-cab09f82.svg",cu="/portfolio-react/assets/JavaScript_logo-9a935d73.svg",My="/portfolio-react/assets/Postgresql-icon-fe85bc84.svg",fu="/portfolio-react/assets/Ruby_logo-eb3d42ca.png",_y="/portfolio-react/assets/Ruby_On_Rails_Logo-85c37690.svg",bo="/portfolio-react/assets/HTML5-6e3fc583.svg",Do="/portfolio-react/assets/CSS3_logo-bc8bddbd.svg",qC="/portfolio-react/assets/api-fbdeeb7f.png",JC="/portfolio-react/assets/docker-icon-2708ff00.svg",oa="/portfolio-react/assets/github-cat-7a0dd11e.svg",eP="/portfolio-react/assets/sql-database-d63f47b6.svg",tP=b(I.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
   padding: .5rem;
