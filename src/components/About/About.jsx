@@ -145,7 +145,7 @@ export default function About () {
                 viewport={{ once: true }}
               >
                 Passionate about technology, collaborative, interested to work alongside a dynamic team, curious, innovative and eager to learn new technologies. Currently
-                looking for new professional challenges in backend development projects with big impact in human life.
+                looking for new professional challenges in web development projects with big impact in human life.
               </motion.p>
               <Skills/>
             </div>

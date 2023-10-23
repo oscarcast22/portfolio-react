@@ -12,7 +12,6 @@ const Container = styled.section`
   margin: auto;
   position: relative;
   padding: 5%;
-  padding-top: 60px;
   background-color: #1d1d1df2;
 
 
@@ -87,7 +86,7 @@ function Hero() {
   return (
     <>
       <Container>
-        <div style={{width: '100%', maxWidth: '1200px', margin: 'auto'}}>
+        <div style={{ width: '100%', maxWidth: '1200px', margin: 'auto', marginBottom:'60px' }}>
           <Dotgrid></Dotgrid>
           <Presentation/>
         </div>

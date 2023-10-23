@@ -34,6 +34,9 @@ const Info = styled.div`
   flex-direction: row;
   gap: 20px;
   margin-bottom: 20px;
+  @media (max-width: 485px) {
+    flex-direction: column;
+  }
 `
 
 const Field = styled.div`
