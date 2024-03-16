@@ -134,7 +134,7 @@ export default function About () {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              src='https://i.ibb.co/T2nZGyg/Oscar.jpg'alt="" 
+              src='https://i.ibb.co/grgLpSG/Imagen-de-Whats-App-2024-03-15-a-las-21-40-25-452a6e73.jpg'alt="" 
               />
             <div style={{display: 'flex', flexDirection: 'column'}}>
               <motion.p
